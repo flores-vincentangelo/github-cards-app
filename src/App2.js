@@ -1,10 +1,15 @@
 import React from 'react';
+import CardList from './CardList.js';
+import './styles/App2.css';
 
 export default class App2 extends React.Component {
 
     render () {
       return (
-        <h1>{this.props.title}</h1>
+        <>
+            <div className='header'>{this.props.title}</div>
+            <CardList />
+        </>
       );
     }
 }
