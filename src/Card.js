@@ -6,7 +6,7 @@ export default class Card extends React.Component{
     render () {
         const profile = this.props;
         return (
-            <div className='github-profile' key={this.props.id}>
+            <div className='github-profile' id={`profile${this.props.index}`}>
                 <img src={profile.avatar_url} alt="placeholder"/>
                 <div className='info'>
                     <div className='name'>{profile.name}</div>

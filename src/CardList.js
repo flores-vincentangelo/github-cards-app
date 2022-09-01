@@ -4,7 +4,7 @@ const CardList = (props) => {
 
     return (
         <>
-            {props.profiles.map((profile, index) => <Card {...profile} key={`card${index}`}/>)}
+            {props.profiles.map((profile, index) => <Card {...profile} key={index} index={index}/>)}
         </>
     );
 }
