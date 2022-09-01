@@ -7,6 +7,7 @@ export default class App extends React.Component {
 
     constructor(props) {
       super(props);
+      //state initialization on class component
       this.state = {
         profiles: [],
       };
@@ -17,6 +18,12 @@ export default class App extends React.Component {
         profiles: [...prevState.profiles, profileData],
       }));
     }
+
+    // addNewProfile(profileData) {
+    //   this.setState(prevState => ({
+    //     profiles: [...prevState.profiles, profileData],
+    //   }));
+    // }
 
     render () {
       return (
