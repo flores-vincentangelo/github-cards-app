@@ -11,6 +11,8 @@ export default class App extends React.Component {
       this.state = {
         profiles: [],
       };
+
+      this.addNewProfile2 = this.addNewProfile2.bind(this);
     }
 
     addNewProfile = (profileData) => {
@@ -19,17 +21,18 @@ export default class App extends React.Component {
       }));
     }
 
-    // addNewProfile(profileData) {
-    //   this.setState(prevState => ({
-    //     profiles: [...prevState.profiles, profileData],
-    //   }));
-    // }
+    addNewProfile2(profileData) {
+      this.setState(prevState => ({
+        profiles: [...prevState.profiles, profileData],
+      }));
+    }
+    //  this does not work. must "bind" first
 
     render () {
       return (
         <>
             <div className='header'>{this.props.title}</div>
-            <Form onSubmit={this.addNewProfile}/>
+            <Form onSubmit={this.addNewProfile2}/>
             <CardList profiles={this.state.profiles}/>
         </>
       );
